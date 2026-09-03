@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>서비스 이용약관 - WorkWork</title>
     <style>
-        /* 기본: 라이트 모드 변수 */
         :root {
             --bg-color: #ffffff;
             --main-text: #000000;
@@ -14,8 +13,6 @@
             --box-bg: #f8f9fa;
             --line-color: #eeeeee;
         }
-
-        /* 다크 모드 클래스 (파라미터에 의해 추가됨) */
         :root.dark-theme {
             --bg-color: #2D3436;
             --main-text: #ffffff;
@@ -24,7 +21,6 @@
             --box-bg: #3d4446;
             --line-color: #4a5153;
         }
-
         body {
             background-color: var(--bg-color);
             color: var(--main-text);
@@ -32,7 +28,7 @@
             line-height: 1.8;
             padding: 25px;
             margin: 0;
-            transition: background 0.3s, color 0.3s;
+            word-break: keep-all;
         }
         .container { max-width: 800px; margin: 0 auto; }
         h1 { font-size: 26px; font-weight: 900; border-bottom: 4px solid var(--point-color); padding-bottom: 15px; margin-bottom: 40px; }
@@ -44,7 +40,6 @@
         b { color: var(--main-text); }
     </style>
     <script>
-        // URL 파라미터 확인 루틴
         window.onload = function() {
             const urlParams = new URLSearchParams(window.location.search);
             if (urlParams.get('theme') === 'dark') {
@@ -56,19 +51,68 @@
 <body>
     <div class="container">
         <h1>서비스 이용약관</h1>
+        
         <div class="section">
             <h2>제 1조 (목적)</h2>
-            <div class="content">이 약관은 <b>WorkWork</b>(이하 "앱")가 제공하는 서비스 이용과 관련하여 앱과 이용자의 권리, 의무를 규정함을 목적으로 합니다.</div>
+            <div class="content">이 약관은 <b>WorkWork</b>(이하 "앱")가 제공하는 걸음 수 측정, 미션 달성 보상, 가상 공간 꾸미기 및 소셜 네트워크 서비스(이하 "서비스")의 이용과 관련하여 앱과 이용자의 권리, 의무 및 책임사항을 규정함을 목적으로 합니다.</div>
         </div>
+
         <div class="section">
-            <h2>제 2조 (재화 및 포인트)</h2>
-            <div class="important-box">
-                - 미션 보상인 <b>'발도장'</b>은 가상 재화이며 현금 환불이 불가합니다.<br>
-                - 아이템 구매 후 회원 탈퇴 시 모든 데이터는 소멸됩니다.
+            <h2>제 2조 (용어의 정의)</h2>
+            <div class="content">
+                1. <b>이용자</b>: 앱에 접속하여 이 약관에 따라 서비스를 이용하는 회원 및 비회원을 말합니다.<br>
+                2. <b>발도장(포인트)</b>: 미션 달성 시 앱 내에서 무상으로 지급되는 가상 재화입니다.<br>
+                3. <b>아이템</b>: 발도장을 사용하여 가상 공간(룸)을 꾸미기 위해 구매하는 디지털 콘텐츠를 말합니다.<br>
+                4. <b>게시물</b>: 이용자가 서비스를 이용함에 있어 앱에 게시한 문자, 그림, 사진 및 각종 파일 등을 의미합니다.
             </div>
         </div>
-        <!-- (이하 상세 내용은 이전과 동일하게 유지) -->
-        <div class="footer">시행일자: 2024년 05월 20일</div>
+
+        <div class="section">
+            <h2>제 3조 (서비스의 제공 및 변경)</h2>
+            <div class="content">
+                앱은 이용자에게 다음과 같은 서비스를 제공합니다.<br>
+                - 실시간 걸음 수 측정 및 통계 기록<br>
+                - 일일/주간/특별 미션 및 도전과제 시스템<br>
+                - 보상(발도장)을 통한 가상 아이템 구매 및 룸 커스터마이징<br>
+                - 사진 공유, 팔로우 및 소셜 피드 서비스<br>
+                앱은 기술적 사양의 변경이나 운영상의 사유로 서비스 내용을 변경할 수 있으며, 이 경우 앱 내 공지사항을 통해 고지합니다.
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>제 4조 (재화 및 아이템 정책)</h2>
+            <div class="important-box">
+                - <b>발도장</b>은 앱 내 서비스 이용을 위한 도구이며, 어떠한 경우에도 <b>현금으로 환불되거나 유상 거래될 수 없습니다.</b><br>
+                - 아이템은 앱 내에서만 사용 권한이 부여되며, 소유권은 앱 운영자에게 있습니다.<br>
+                - 회원 탈퇴 시 보유 중인 발도장 및 구매한 아이템 내역은 모두 소멸되며 복구되지 않습니다.
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>제 5조 (부정행위 금지 및 이용 제한)</h2>
+            <div class="content">
+                이용자는 다음 각 호의 행위를 해서는 안 됩니다.<br>
+                1. 기기 조작(치팅 도구 사용 등)을 통해 실제 걷지 않고 <b>걸음 수를 부정하게 증식</b>하는 행위<br>
+                2. 타인의 구글 계정 정보를 도용하여 가입하거나 활동하는 행위<br>
+                3. 소셜 피드에 음란물, 욕설, 타인 비방, 광고성 홍보글 등을 게시하는 행위<br>
+                4. 앱의 시스템을 해킹하거나 정상적인 운영을 방해하는 행위<br>
+                <b>※ 위반 시 이용 제한, 데이터 초기화 또는 계정 영구 정지 조치가 취해질 수 있습니다.</b>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>제 6조 (책임의 제한)</h2>
+            <div class="content">
+                1. 앱은 천재지변, 서버 점검, 통신 장애 등 불가항력적인 사유로 서비스를 제공할 수 없는 경우 책임이 면제됩니다.<br>
+                2. 앱은 이용자가 게시한 게시물의 신뢰도나 정확성에 대해 보증하지 않으며, 이용자 간의 분쟁에 개입하지 않습니다.<br>
+                3. 하드웨어 센서의 오차로 인한 걸음 수 측정값의 미세한 차이에 대해서는 책임을 지지 않습니다.
+            </div>
+        </div>
+        
+        <div class="footer">
+            공고일자: 2024년 05월 20일<br>
+            시행일자: 2024년 05월 20일
+        </div>
     </div>
 </body>
 </html>
